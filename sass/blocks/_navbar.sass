@@ -1,0 +1,173 @@
+.navbar
+  padding: 7px 0 8px 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &-nav
+    &__list
+      margin: inherit
+      padding: 0
+      display: flex
+      justify-content: space-between
+      width: 511px
+      height: 14px
+    &__item1
+      width: 50px
+      height: 17px
+    &__item
+      position: relative
+      height: 17px
+      &:hover
+        color: #ffc800
+        cursor: pointer
+        border-bottom: 2px #ffc800 solid
+      &::after
+        content: ''
+        position: absolute
+        width: 1px
+        height: 12px
+        background-color: #000000
+        opacity: 0.15
+        right: -28px
+        top: 3px
+      &:last-child
+        &::after
+          content: none
+  &-tel
+    align-items: center
+    display: flex
+    &__num
+      margin-left: 5px
+    &__img
+      width: 18px
+      height: 18px
+  &-button
+    margin-left: 43px
+.container-fluid
+  // background-image: url("../img/navbar/navbarBg.jpg")
+  &::before
+   content: ''
+   position: absolute
+   width: 39%
+   height: 40%
+   background-color: #f1f1f1
+   right: 0
+   z-index: -20
+.burger
+  order: 1
+  display: none
+  &-menu
+    display: block
+    width: 50px
+    height: 50px
+    background-color: #ffc800
+    border-radius: 50%
+    position: relative
+    &__arrow
+      position: absolute
+      top: 50%
+      margin-top: -1px
+      left: 50%
+      margin-left: -10px
+      width: 20px
+      height: 2px
+      background-color: #222
+      &::after
+        transform: translateY(5px)
+        content: ''
+        position: absolute
+        top: 50%
+        margin-top: -1px
+        left: 50%
+        margin-left: -10px
+        width: 20px
+        height: 2px
+        background-color: #222
+        transition: 0.2s
+      &::before
+        transform: translateY(-5px)
+        content: ''
+        position: absolute
+        top: 50%
+        margin-top: -1px
+        left: 50%
+        margin-left: -10px
+        width: 20px
+        height: 2px
+        background-color: #222
+        transition: 0.2s
+    &_active
+      .burger
+        &-menu
+          &__arrow
+            height: 0
+            &::before
+              transform: rotate(-225deg)
+              width: 20px
+            &::after
+              transform: rotate(225deg)
+              width: 20px
+.navbar
+  &__list
+    display: flex
+    justify-content: space-between
+.container-bg
+  background: #ffc800
+  display: none
+  &_active
+    display: flex
+
+@media (max-width: 1200px)
+  .navbar
+    &-button
+      margin-left: 15px
+    &-nav
+      &__list
+        width: auto
+      &__item
+        margin-right: 10px
+        &::after
+          right: -5px           
+  .container-fluid
+    &::before
+      width: 46% 
+@media (max-width: 768px)
+  .navbar
+    &-nav
+      &__list
+        display: none
+      &__item, &__item1
+        font-size: 18px
+        margin: 0
+        width: auto
+    &-button
+      font-size: 18px
+    &-tel
+      &__num
+        font-size: 18px
+  .container-fluid
+    &::before
+      width: 50% 
+      
+  .burger
+    display: block
+@media (max-width: 567px)
+  .navbar
+    &-button
+      margin-left: 0
+    &-tel
+      &__img
+        display: none
+      &__num
+        display: none
+      &__num1
+        text-align: center
+        margin: 5px
+    &-nav
+      &__item
+        font-size: 16px
+      &__item1
+        font-size: 16px
+  .container-fluid
+    &::before
+      content: none 

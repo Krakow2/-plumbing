@@ -1,0 +1,58 @@
+.services
+  margin-top: 133px
+  background-color: #f1f1f1
+  position: relative
+  padding-bottom: 96px
+  &-content
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    padding-top: 104px
+    position: relative
+    &::before
+      content: 'Услуги'
+      position: absolute
+      padding: 20px 68px
+      background-color: #ffc800
+      text-transform: uppercase
+      color: #020202
+      font-size: 28px
+      font-weight: 400
+      line-height: 28px
+      top: -34px
+      left: -3%
+  &-button
+    font-size: 15px
+    font-weight: 400
+    line-height: 15.93px
+    text-transform: uppercase
+  &-card
+    width: 377px
+    height: 236px
+    background: grey
+    margin-bottom: 21px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    &__title
+      margin-bottom: 30px
+      color: #fcfafa
+      font-size: 20px
+      font-weight: 400
+      line-height: 26px
+      text-align: center
+    &__1
+      background-image: url('../img/services/1-img.jpg')
+      filter: grayscale(50%)
+    &__2
+      background-image: url('../img/services/2-img.jpg')
+      filter: grayscale(50%)
+    &__3
+      background-image: url('../img/services/3-img.jpg')
+      filter: grayscale(50%)
+@media (max-width: 768px)
+  .services
+    &-content
+      justify-content: center
