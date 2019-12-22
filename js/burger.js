@@ -9,8 +9,3 @@ closeB = document.querySelector('.burger-menu_active')
 MenuB.addEventListener('click', () => {
   $('div.container-bg').toggleClass('container-bg_active')
 });
-
-// $('.burger-menu').on('click', function (e) {
-//   e.preventDefault;
-//   $(this).toggleClass('burger-menu_active');
-// });

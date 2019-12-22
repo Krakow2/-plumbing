@@ -11,16 +11,9 @@
       justify-content: space-between
       width: 511px
       height: 14px
-    &__item1
-      width: 50px
-      height: 17px
     &__item
       position: relative
       height: 17px
-      &:hover
-        color: #ffc800
-        cursor: pointer
-        border-bottom: 2px #ffc800 solid
       &::after
         content: ''
         position: absolute
@@ -33,6 +26,11 @@
       &:last-child
         &::after
           content: none
+    &__item1
+      &:hover
+        color: #ffc800
+        cursor: pointer
+        border-bottom: 2px #ffc800 solid
   &-tel
     align-items: center
     display: flex
@@ -127,10 +125,17 @@
       &__item
         margin-right: 10px
         &::after
-          right: -5px           
+          right: -5px
   .container-fluid
     &::before
       width: 46% 
+@media (max-width: 992px)
+  .navbar
+    &-nav
+      &__item
+        &:hover
+          color: black
+          border-bottom: none
 @media (max-width: 768px)
   .navbar
     &-nav
@@ -140,6 +145,8 @@
         font-size: 18px
         margin: 0
         width: auto
+        &:hover
+          color: black
     &-button
       font-size: 18px
     &-tel
@@ -148,6 +155,7 @@
       &__num1
         text-align: center
         margin: 5px
+        display: none
   .container-fluid
     &::before
       width: 50% 
@@ -162,6 +170,8 @@
         display: none
       &__num
         display: none
+      &__num1
+        display: block
     &-nav
       &__item
         font-size: 16px
@@ -170,3 +180,10 @@
   .container-fluid
     &::before
       content: none 
+@media (max-width: 320px)
+  .navbar
+    &-nav
+      &__item
+        font-size: 14px
+      &__item1
+        font-size: 14px

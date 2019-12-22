@@ -6,7 +6,7 @@
     text-transform: uppercase
     color: #ffc800
     font-size: 35px
-    font-weight: 400
+    font-weight: 900
     line-height: 55px
     margin: 0
     margin-bottom: 22px
@@ -30,7 +30,46 @@
     top: 211px
   &-button
     text-transform: uppercase
+@media (min-width: 1200px)
+  .hero
+    &-content
+      width: 1171px
 @media (max-width: 1200px)
   .hero
     &-content
-      top: 50px
+      top: 100px
+      max-width: 768px
+@media (max-width: 768px)
+  .hero
+    &-title
+      font-size: 30px
+      margin-bottom: 0
+      line-height: normal
+    &-subtitle
+      font-size: 29px
+    &-content
+      width: 567px
+      top: 30px
+    &-slider
+      &__img
+        height: 500px
+    &-text
+      margin-bottom: 30px
+@media (max-width: 567px)
+  .hero
+    &-content
+      width: 320px
+    &-title
+      font-size: 21px
+      margin-bottom: 20px
+    &-subtitle
+      font-size: 16px
+      line-height: normal
+    &-text
+      font-size: 16px
+@media (max-width: 320px)
+  .hero
+    &-content
+      width: 272px
+    &-subtitle
+      margin-bottom: 20px
